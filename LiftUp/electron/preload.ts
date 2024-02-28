@@ -19,7 +19,7 @@ contextBridge.exposeInMainWorld(
       let validChannels = ['fromMain']; // Ana süreçten renderer sürece güvenli kanallar
       if (validChannels.includes(channel)) {
         // No need to sanitize, as sendMain does this
-        ipcRenderer.on(channel, (event, ...args) => func(...args));
+        ipcRenderer.on(channel, (_event, ...args) => func(...args));
       }
     },
     readExcel: (filePath:string) => ipcRenderer.invoke('read-excel', filePath)
