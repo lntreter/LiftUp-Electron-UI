@@ -1,0 +1,167 @@
+[
+  {
+    "": {
+      "Number": "#11111"
+    },
+    "Signal": {
+      "Name": "Ekipman 2 28V DC-1",
+      "TYPE": "28V DC Power",
+      "CATEGORY": "P",
+      "CURRENT(Max)": 2
+    },
+    "CABLE": {
+      "TYPE": "SINGLE",
+      "AWG": "22AWG"
+    },
+    "Source": {
+      "ATA CHAPTER": "ATAXX",
+      "PIN NAME": "28V DC Out-1",
+      "LOCATION": "MAIN CABIN",
+      "LRU": "Ekipman 1",
+      "RD NUMBER": "1111XX1",
+      "Connector": "1111XX1_J1",
+      "Pin No": 1
+    },
+    "Destination": {
+      "ATA CHAPTER": "ATAXX",
+      "PIN NAME": "Ekipman 2 28V DC-1",
+      "LOCATION": "COCKPIT",
+      "LRU": "Ekipman 2",
+      "RD NUMBER": "1111XX2",
+      "Connector": "1111XX2_J1",
+      "Pin No": 1
+    }
+  },
+  {
+    "": {
+      "Number": "#11112"
+    },
+    "Signal": {
+      "Name": "Ekipman 2 28V DC-2",
+      "TYPE": "28V DC Power",
+      "CATEGORY": "P",
+      "CURRENT(Max)": 0.5
+    },
+    "CABLE": {
+      "TYPE": "SINGLE",
+      "AWG": "24AWG"
+    },
+    "Source": {
+      "ATA CHAPTER": "ATAXX",
+      "PIN NAME": "28V DC Out-2",
+      "LOCATION": "MAIN CABIN",
+      "LRU": "Ekipman 1",
+      "RD NUMBER": "1111XX1",
+      "Connector": "1111XX1_J1",
+      "Pin No": 2
+    },
+    "Destination": {
+      "ATA CHAPTER": "ATAXX",
+      "PIN NAME": "Ekipman 2 28V DC-2",
+      "LOCATION": "COCKPIT",
+      "LRU": "Ekipman 2",
+      "RD NUMBER": "1111XX2",
+      "Connector": "1111XX2_J1",
+      "Pin No": 2
+    }
+  },
+  {
+    "": {
+      "Number": "#11113"
+    },
+    "Signal": {
+      "Name": "Ekipman 2 115V AC Faz-1",
+      "TYPE": "115V AC Power",
+      "CATEGORY": "A",
+      "CURRENT(Max)": 5
+    },
+    "CABLE": {
+      "TYPE": "TWISTED",
+      "AWG": "20AWG"
+    },
+    "Source": {
+      "ATA CHAPTER": "ATAXX",
+      "PIN NAME": "115V AC Out Faz-1",
+      "LOCATION": "MAIN CABIN",
+      "LRU": "Ekipman 1",
+      "RD NUMBER": "1111XX1",
+      "Connector": "1111XX1_J2",
+      "Pin No": "A"
+    },
+    "Destination": {
+      "ATA CHAPTER": "ATAXX",
+      "PIN NAME": "Ekipman 2 115V AC Faz-1",
+      "LOCATION": "COCKPIT",
+      "LRU": "Ekipman 2",
+      "RD NUMBER": "1111XX2",
+      "Connector": "1111XX2_J2",
+      "Pin No": "A"
+    }
+  },
+  {
+    "": {
+      "Number": "#11114"
+    },
+    "Signal": {
+      "Name": "Ekipman 2 115V AC Faz-2",
+      "TYPE": "115V AC Power",
+      "CATEGORY": "A",
+      "CURRENT(Max)": 5
+    },
+    "CABLE": {
+      "TYPE": "TWISTED",
+      "AWG": "20AWG"
+    },
+    "Source": {
+      "ATA CHAPTER": "ATAXX",
+      "PIN NAME": "115V AC Out Faz-2",
+      "LOCATION": "MAIN CABIN",
+      "LRU": "Ekipman 1",
+      "RD NUMBER": "1111XX1",
+      "Connector": "1111XX1_J2",
+      "Pin No": "B"
+    },
+    "Destination": {
+      "ATA CHAPTER": "ATAXX",
+      "PIN NAME": "Ekipman 2 115V AC Faz-2",
+      "LOCATION": "COCKPIT",
+      "LRU": "Ekipman 2",
+      "RD NUMBER": "1111XX2",
+      "Connector": "1111XX2_J2",
+      "Pin No": "B"
+    }
+  },
+  {
+    "": {
+      "Number": "#11115"
+    },
+    "Signal": {
+      "Name": "Ekipman 2 115V AC Faz-3",
+      "TYPE": "115V AC Power",
+      "CATEGORY": "A",
+      "CURRENT(Max)": 5
+    },
+    "CABLE": {
+      "TYPE": "TWISTED",
+      "AWG": "20AWG"
+    },
+    "Source": {
+      "ATA CHAPTER": "ATAXX",
+      "PIN NAME": "115V AC Out Faz-3",
+      "LOCATION": "MAIN CABIN",
+      "LRU": "Ekipman 1",
+      "RD NUMBER": "1111XX1",
+      "Connector": "1111XX1_J2",
+      "Pin No": "C"
+    },
+    "Destination": {
+      "ATA CHAPTER": "ATAXX",
+      "PIN NAME": "Ekipman 2 115V AC Faz-3",
+      "LOCATION": "COCKPIT",
+      "LRU": "Ekipman 2",
+      "RD NUMBER": "1111XX2",
+      "Connector": "1111XX2_J2",
+      "Pin No": "C"
+    }
+  }
+]
