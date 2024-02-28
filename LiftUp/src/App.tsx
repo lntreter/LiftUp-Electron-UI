@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import TLogo from './assets/logo.png'
 import LULogo from './assets/liftup2.png'
 import './App.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
@@ -12,13 +14,14 @@ function App() {
     console.log(fileDirectory);
   }
   , [fileDirectory])
-  
+
   const Convert = async (inputFilePath:string) => {
     try {
       console.log('inputFilePath: ', inputFilePath)
       await window.ipcRenderer.invoke('read-excel', inputFilePath);
 
       console.log('JSON dosyası oluşturuldu.')
+      toast("JSON dosyası oluşturuldu.")
       
     } catch (error) {
       console.error('Excel dosyası işlenirken bir hata oluştu:', error);
@@ -27,6 +30,7 @@ function App() {
 
   return (
     <>
+      <ToastContainer />
       <div>
         <a>
           <img src={LULogo} className="logo" alt="Vite logo" />
