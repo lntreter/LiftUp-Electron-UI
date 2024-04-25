@@ -1,4 +1,4 @@
-const { convertExcelToJson } = require('./ExcelToJSON');
+const { convertExcelToXml } = require('./ExcelToJSON');
 
 // Fonksiyonu kullanarak bir Excel dosyasını JSON'a dönüştürme
-convertExcelToJson('C:\\Users\\Burhan\\Downloads\\LiftUp.xlsx', './sonuc.json');
+convertExcelToXml('./ornek.xlsx', './sonuc.xml');

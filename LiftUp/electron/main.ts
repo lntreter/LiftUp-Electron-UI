@@ -80,6 +80,88 @@ app.on('activate', () => {
 // });
 
 
+// ipcMain.handle('read-excel', async (_event, arg) => {
+//   try {
+//     if(fs.existsSync(arg)) {
+//       console.log('arg: ', arg);
+//       const fileBuffer = fs.readFileSync(arg);
+//       console.log('fileBuffer: ', fileBuffer);
+//       const data = XLSX.read(fileBuffer, {type: 'buffer'});
+//       const workbook = data
+//       const sheetName = workbook.SheetNames[0];
+//       const worksheet = workbook.Sheets[sheetName];
+
+//       // JSON'a çevirme işlemi başlar. İlk satırı atlamak için range: 1 eklenir.
+//       let jsonData = XLSX.utils.sheet_to_json(worksheet, { header:1, range: 2 });
+
+
+//       console.log('jsonData: ', jsonData);
+
+//       // JSON verilerini istenen yapıya dönüştür
+//       jsonData = jsonData.map((row:any) => {
+//         // Yeni bir obje oluştur
+//         let newRow:any = {};
+//         // Başlıkları manuel olarak eşleştir
+//         newRow[''] = {
+//           'Number': row[0],
+//         };
+//         newRow['Signal'] = {
+//           'Name': row[1],
+//           'TYPE': row[2],
+//           'CATEGORY': row[3],
+//           'CURRENT(Max)': row[4]
+//         };
+//         newRow['CABLE'] = {
+//           'TYPE': row[5],
+//           'AWG': row[6]
+//         };
+//         newRow['Source'] = {
+//           'ATA CHAPTER': row[7],
+//           'PIN NAME': row[8],
+//           'LOCATION': row[9],
+//           'LRU': row[10],
+//           'RD NUMBER': row[11],
+//           'Connector': row[12],
+//           'Pin No': row[13]
+//         };
+//         newRow['Destination'] = {
+//           'ATA CHAPTER': row[14],
+//           'PIN NAME': row[15],
+//           'LOCATION': row[16],
+//           'LRU': row[17],
+//           'RD NUMBER': row[18],
+//           'Connector': row[19],
+//           'Pin No': row[20]
+//         };
+          
+//         // Eğer daha fazla sütun varsa, onları da burada ekleyebilirsiniz.
+
+//         return newRow;
+//       });
+
+//       // JSON verisini bir dosyaya yaz
+
+//       const outputFilePath = "./src/components/Output.json"
+
+
+//       fs.writeFile(outputFilePath, JSON.stringify(jsonData, null, 2), (err:any) => {
+//         if (err) {
+//           console.error('JSON dosyası yazılırken bir hata oluştu:', err);
+//           return;
+//         }
+//         console.log(`${outputFilePath} üzerine JSON dosyası başarıyla yazıldı.`);
+//       });
+
+//       return data;
+//     } else {
+//       throw new Error(`File does not exist: ${arg}`);
+//     }
+//   } catch (err) {
+//     console.error(err);
+//     throw err;
+//   }
+// });
+
 ipcMain.handle('read-excel', async (_event, arg) => {
   try {
     if(fs.existsSync(arg)) {
@@ -94,62 +176,55 @@ ipcMain.handle('read-excel', async (_event, arg) => {
       // JSON'a çevirme işlemi başlar. İlk satırı atlamak için range: 1 eklenir.
       let jsonData = XLSX.utils.sheet_to_json(worksheet, { header:1, range: 2 });
 
+      // JSON verilerini XML'e dönüştürmeye başlayalım
+      let xmlData = '<?xml version="1.0" encoding="UTF-8"?>\n<root>';
 
-      console.log('jsonData: ', jsonData);
-
-      // JSON verilerini istenen yapıya dönüştür
-      jsonData = jsonData.map((row:any) => {
-        // Yeni bir obje oluştur
-        let newRow:any = {};
-        // Başlıkları manuel olarak eşleştir
-        newRow[''] = {
-          'Number': row[0],
-        };
-        newRow['Signal'] = {
-          'Name': row[1],
-          'TYPE': row[2],
-          'CATEGORY': row[3],
-          'CURRENT(Max)': row[4]
-        };
-        newRow['CABLE'] = {
-          'TYPE': row[5],
-          'AWG': row[6]
-        };
-        newRow['Source'] = {
-          'ATA CHAPTER': row[7],
-          'PIN NAME': row[8],
-          'LOCATION': row[9],
-          'LRU': row[10],
-          'RD NUMBER': row[11],
-          'Connector': row[12],
-          'Pin No': row[13]
-        };
-        newRow['Destination'] = {
-          'ATA CHAPTER': row[14],
-          'PIN NAME': row[15],
-          'LOCATION': row[16],
-          'LRU': row[17],
-          'RD NUMBER': row[18],
-          'Connector': row[19],
-          'Pin No': row[20]
-        };
-          
-        // Eğer daha fazla sütun varsa, onları da burada ekleyebilirsiniz.
-
-        return newRow;
+      jsonData.forEach((row: any) => {
+        xmlData += `
+      <row>
+        <Number>${row[0]}</Number>
+        <Signal>
+          <Name>${row[1]}</Name>
+          <TYPE>${row[2]}</TYPE>
+          <CATEGORY>${row[3]}</CATEGORY>
+          <CURRENT_Max>${row[4]}</CURRENT_Max>
+        </Signal>
+        <CABLE>
+          <TYPE>${row[5]}</TYPE>
+          <AWG>${row[6]}</AWG>
+        </CABLE>
+        <Source>
+          <ATA_CHAPTER>${row[7]}</ATA_CHAPTER>
+          <PIN_NAME>${row[8]}</PIN_NAME>
+          <LOCATION>${row[9]}</LOCATION>
+          <LRU>${row[10]}</LRU>
+          <RD_NUMBER>${row[11]}</RD_NUMBER>
+          <Connector>${row[12]}</Connector>
+          <Pin_No>${row[13]}</Pin_No>
+        </Source>
+        <Destination>
+          <ATA_CHAPTER>${row[14]}</ATA_CHAPTER>
+          <PIN_NAME>${row[15]}</PIN_NAME>
+          <LOCATION>${row[16]}</LOCATION>
+          <LRU>${row[17]}</LRU>
+          <RD_NUMBER>${row[18]}</RD_NUMBER>
+          <Connector>${row[19]}</Connector>
+          <Pin_No>${row[20]}</Pin_No>
+        </Destination>
+      </row>`;
       });
 
-      // JSON verisini bir dosyaya yaz
+      xmlData += '\n</root>';
 
-      const outputFilePath = "./src/components/Output.json"
+      // XML verisini bir dosyaya yaz
+      const outputFilePath = "./src/components/Output.xml";
 
-
-      fs.writeFile(outputFilePath, JSON.stringify(jsonData, null, 2), (err:any) => {
+      fs.writeFile(outputFilePath, xmlData, (err) => {
         if (err) {
-          console.error('JSON dosyası yazılırken bir hata oluştu:', err);
+          console.error('XML dosyası yazılırken bir hata oluştu:', err);
           return;
         }
-        console.log(`${outputFilePath} üzerine JSON dosyası başarıyla yazıldı.`);
+        console.log(`${outputFilePath} üzerine XML dosyası başarıyla yazıldı.`);
       });
 
       return data;
@@ -161,6 +236,7 @@ ipcMain.handle('read-excel', async (_event, arg) => {
     throw err;
   }
 });
+
 
 
 app.whenReady().then(createWindow)
