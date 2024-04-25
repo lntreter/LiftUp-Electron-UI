@@ -20,8 +20,8 @@ function App() {
       console.log('inputFilePath: ', inputFilePath)
       await window.ipcRenderer.invoke('read-excel', inputFilePath);
 
-      console.log('JSON dosyası oluşturuldu.')
-      toast("JSON dosyası oluşturuldu.")
+      console.log('XML dosyası oluşturuldu.')
+      toast("XML dosyası oluşturuldu.")
       
     } catch (error) {
       console.error('Excel dosyası işlenirken bir hata oluştu:', error);

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  <row>
+    <Number>#11111</Number>
+    <Signal>
+      <Name>Ekipman 2 28V DC-1</Name>
+      <Type>28V DC Power</Type>
+      <Category>P</Category>
+      <CurrentMax>2</CurrentMax>
+    </Signal>
+    <Cable>
+      <Type>SINGLE</Type>
+      <AWG>22AWG</AWG>
+    </Cable>
+    <Source>
+      <ATAChapter>ATAXX</ATAChapter>
+      <PinName>28V DC Out-1</PinName>
+      <Location>MAIN CABIN</Location>
+      <LRU>Ekipman 1</LRU>
+      <RDNumber>1111XX1</RDNumber>
+      <Connector>1111XX1_J1</Connector>
+      <PinNo>1</PinNo>
+    </Source>
+    <Destination>
+      <ATAChapter>ATAXX</ATAChapter>
+      <PinName>Ekipman 2 28V DC-1</PinName>
+      <Location>COCKPIT</Location>
+      <LRU>Ekipman 2</LRU>
+      <RDNumber>1111XX2</RDNumber>
+      <Connector>1111XX2_J1</Connector>
+      <PinNo>1</PinNo>
+    </Destination>
+  </row>
+  <row>
+    <Number>#11112</Number>
+    <Signal>
+      <Name>Ekipman 2 28V DC-2</Name>
+      <Type>28V DC Power</Type>
+      <Category>P</Category>
+      <CurrentMax>0.5</CurrentMax>
+    </Signal>
+    <Cable>
+      <Type>SINGLE</Type>
+      <AWG>24AWG</AWG>
+    </Cable>
+    <Source>
+      <ATAChapter>ATAXX</ATAChapter>
+      <PinName>28V DC Out-2</PinName>
+      <Location>MAIN CABIN</Location>
+      <LRU>Ekipman 1</LRU>
+      <RDNumber>1111XX1</RDNumber>
+      <Connector>1111XX1_J1</Connector>
+      <PinNo>2</PinNo>
+    </Source>
+    <Destination>
+      <ATAChapter>ATAXX</ATAChapter>
+      <PinName>Ekipman 2 28V DC-2</PinName>
+      <Location>COCKPIT</Location>
+      <LRU>Ekipman 2</LRU>
+      <RDNumber>1111XX2</RDNumber>
+      <Connector>1111XX2_J1</Connector>
+      <PinNo>2</PinNo>
+    </Destination>
+  </row>
+  <row>
+    <Number>#11113</Number>
+    <Signal>
+      <Name>Ekipman 2 115V AC Faz-1</Name>
+      <Type>115V AC Power</Type>
+      <Category>A</Category>
+      <CurrentMax>5</CurrentMax>
+    </Signal>
+    <Cable>
+      <Type>TWISTED</Type>
+      <AWG>20AWG</AWG>
+    </Cable>
+    <Source>
+      <ATAChapter>ATAXX</ATAChapter>
+      <PinName>115V AC Out Faz-1</PinName>
+      <Location>MAIN CABIN</Location>
+      <LRU>Ekipman 1</LRU>
+      <RDNumber>1111XX1</RDNumber>
+      <Connector>1111XX1_J2</Connector>
+      <PinNo>A</PinNo>
+    </Source>
+    <Destination>
+      <ATAChapter>ATAXX</ATAChapter>
+      <PinName>Ekipman 2 115V AC Faz-1</PinName>
+      <Location>COCKPIT</Location>
+      <LRU>Ekipman 2</LRU>
+      <RDNumber>1111XX2</RDNumber>
+      <Connector>1111XX2_J2</Connector>
+      <PinNo>A</PinNo>
+    </Destination>
+  </row>
+  <row>
+    <Number>#11114</Number>
+    <Signal>
+      <Name>Ekipman 2 115V AC Faz-2</Name>
+      <Type>115V AC Power</Type>
+      <Category>A</Category>
+      <CurrentMax>5</CurrentMax>
+    </Signal>
+    <Cable>
+      <Type>TWISTED</Type>
+      <AWG>20AWG</AWG>
+    </Cable>
+    <Source>
+      <ATAChapter>ATAXX</ATAChapter>
+      <PinName>115V AC Out Faz-2</PinName>
+      <Location>MAIN CABIN</Location>
+      <LRU>Ekipman 1</LRU>
+      <RDNumber>1111XX1</RDNumber>
+      <Connector>1111XX1_J2</Connector>
+      <PinNo>B</PinNo>
+    </Source>
+    <Destination>
+      <ATAChapter>ATAXX</ATAChapter>
+      <PinName>Ekipman 2 115V AC Faz-2</PinName>
+      <Location>COCKPIT</Location>
+      <LRU>Ekipman 2</LRU>
+      <RDNumber>1111XX2</RDNumber>
+      <Connector>1111XX2_J2</Connector>
+      <PinNo>B</PinNo>
+    </Destination>
+  </row>
+  <row>
+    <Number>#11115</Number>
+    <Signal>
+      <Name>Ekipman 2 115V AC Faz-3</Name>
+      <Type>115V AC Power</Type>
+      <Category>A</Category>
+      <CurrentMax>5</CurrentMax>
+    </Signal>
+    <Cable>
+      <Type>TWISTED</Type>
+      <AWG>20AWG</AWG>
+    </Cable>
+    <Source>
+      <ATAChapter>ATAXX</ATAChapter>
+      <PinName>115V AC Out Faz-3</PinName>
+      <Location>MAIN CABIN</Location>
+      <LRU>Ekipman 1</LRU>
+      <RDNumber>1111XX1</RDNumber>
+      <Connector>1111XX1_J2</Connector>
+      <PinNo>C</PinNo>
+    </Source>
+    <Destination>
+      <ATAChapter>ATAXX</ATAChapter>
+      <PinName>Ekipman 2 115V AC Faz-3</PinName>
+      <Location>COCKPIT</Location>
+      <LRU>Ekipman 2</LRU>
+      <RDNumber>1111XX2</RDNumber>
+      <Connector>1111XX2_J2</Connector>
+      <PinNo>C</PinNo>
+    </Destination>
+  </row>
+</root>
