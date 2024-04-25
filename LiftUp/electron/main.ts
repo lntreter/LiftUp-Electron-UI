@@ -2,6 +2,24 @@ import { app, BrowserWindow, ipcMain } from 'electron'
 import path from 'node:path'
 import fs from 'node:fs'
 import * as XLSX from 'xlsx'
+import { exec } from 'child_process';
+import { run } from 'node:test';
+
+function runVbsScript(scriptPath: string) {
+    // Command to run .vbs script
+    const command = `cscript //NoLogo "${scriptPath}"`;
+
+    exec(command, (error, stdout, stderr) => {
+        if (error) {
+            console.error(`exec error: ${error}`);
+            return;
+        }
+        console.log(`stdout: ${stdout}`);
+        if (stderr) {
+            console.error(`stderr: ${stderr}`);
+        }
+    });
+}
 
 // The built directory structure
 //
@@ -226,6 +244,8 @@ ipcMain.handle('read-excel', async (_event, arg) => {
         }
         console.log(`${outputFilePath} üzerine XML dosyası başarıyla yazıldı.`);
       });
+
+      runVbsScript('./src/components/Convert.vbs');
 
       return data;
     } else {
