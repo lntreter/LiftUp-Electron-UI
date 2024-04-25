@@ -18,7 +18,7 @@
           <LOCATION>MAIN CABIN</LOCATION>
           <LRU>Ekipman 1</LRU>
           <RD_NUMBER>1111XX1</RD_NUMBER>
-          <Connector>1111XX1_J1</Connector>
+          <Connector>282108-1</Connector>
           <Pin_No>1</Pin_No>
         </Source>
         <Destination>
@@ -27,7 +27,7 @@
           <LOCATION>COCKPIT</LOCATION>
           <LRU>Ekipman 2</LRU>
           <RD_NUMBER>1111XX2</RD_NUMBER>
-          <Connector>1111XX2_J1</Connector>
+          <Connector>282108-1</Connector>
           <Pin_No>1</Pin_No>
         </Destination>
       </row>
@@ -49,7 +49,7 @@
           <LOCATION>MAIN CABIN</LOCATION>
           <LRU>Ekipman 1</LRU>
           <RD_NUMBER>1111XX1</RD_NUMBER>
-          <Connector>1111XX1_J1</Connector>
+          <Connector>282108-1</Connector>
           <Pin_No>2</Pin_No>
         </Source>
         <Destination>
@@ -58,7 +58,7 @@
           <LOCATION>COCKPIT</LOCATION>
           <LRU>Ekipman 2</LRU>
           <RD_NUMBER>1111XX2</RD_NUMBER>
-          <Connector>1111XX2_J1</Connector>
+          <Connector>282108-1</Connector>
           <Pin_No>2</Pin_No>
         </Destination>
       </row>
@@ -80,7 +80,7 @@
           <LOCATION>MAIN CABIN</LOCATION>
           <LRU>Ekipman 1</LRU>
           <RD_NUMBER>1111XX1</RD_NUMBER>
-          <Connector>1111XX1_J2</Connector>
+          <Connector>282108-1</Connector>
           <Pin_No>A</Pin_No>
         </Source>
         <Destination>
@@ -89,7 +89,7 @@
           <LOCATION>COCKPIT</LOCATION>
           <LRU>Ekipman 2</LRU>
           <RD_NUMBER>1111XX2</RD_NUMBER>
-          <Connector>1111XX2_J2</Connector>
+          <Connector>282108-1</Connector>
           <Pin_No>A</Pin_No>
         </Destination>
       </row>
@@ -111,7 +111,7 @@
           <LOCATION>MAIN CABIN</LOCATION>
           <LRU>Ekipman 1</LRU>
           <RD_NUMBER>1111XX1</RD_NUMBER>
-          <Connector>1111XX1_J2</Connector>
+          <Connector>282108-1</Connector>
           <Pin_No>B</Pin_No>
         </Source>
         <Destination>
@@ -120,7 +120,7 @@
           <LOCATION>COCKPIT</LOCATION>
           <LRU>Ekipman 2</LRU>
           <RD_NUMBER>1111XX2</RD_NUMBER>
-          <Connector>1111XX2_J2</Connector>
+          <Connector>282108-1</Connector>
           <Pin_No>B</Pin_No>
         </Destination>
       </row>
@@ -142,7 +142,7 @@
           <LOCATION>MAIN CABIN</LOCATION>
           <LRU>Ekipman 1</LRU>
           <RD_NUMBER>1111XX1</RD_NUMBER>
-          <Connector>1111XX1_J2</Connector>
+          <Connector>282108-1</Connector>
           <Pin_No>C</Pin_No>
         </Source>
         <Destination>
@@ -151,7 +151,7 @@
           <LOCATION>COCKPIT</LOCATION>
           <LRU>Ekipman 2</LRU>
           <RD_NUMBER>1111XX2</RD_NUMBER>
-          <Connector>1111XX2_J2</Connector>
+          <Connector>282108-1</Connector>
           <Pin_No>C</Pin_No>
         </Destination>
       </row>
