@@ -245,7 +245,7 @@ ipcMain.handle('read-excel', async (_event, arg) => {
         console.log(`${outputFilePath} üzerine XML dosyası başarıyla yazıldı.`);
       });
 
-      runVbsScript('./src/components/Convert.vbs');
+      runVbsScript('C:/Users/SEFA/Desktop/LiftUp-Electron-UI/LiftUp/proje.vbs');
 
       return data;
     } else {
