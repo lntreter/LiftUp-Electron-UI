@@ -49,7 +49,7 @@
           <LOCATION>MAIN CABIN</LOCATION>
           <LRU>Ekipman 1</LRU>
           <RD_NUMBER>1111XX1</RD_NUMBER>
-          <Connector>282108-1</Connector>
+          <Connector>282107-1</Connector>
           <Pin_No>2</Pin_No>
         </Source>
         <Destination>
@@ -58,7 +58,7 @@
           <LOCATION>COCKPIT</LOCATION>
           <LRU>Ekipman 2</LRU>
           <RD_NUMBER>1111XX2</RD_NUMBER>
-          <Connector>282108-1</Connector>
+          <Connector>282107-1</Connector>
           <Pin_No>2</Pin_No>
         </Destination>
       </row>
@@ -122,6 +122,37 @@
           <RD_NUMBER>1111XX2</RD_NUMBER>
           <Connector>282108-1</Connector>
           <Pin_No>B</Pin_No>
+        </Destination>
+      </row>
+      <row>
+        <Number>#11115</Number>
+        <Signal>
+          <Name>Ekipman 2 115V AC Faz-3</Name>
+          <TYPE>115V AC Power</TYPE>
+          <CATEGORY>A</CATEGORY>
+          <CURRENT_Max>5</CURRENT_Max>
+        </Signal>
+        <CABLE>
+          <TYPE>TWISTED</TYPE>
+          <AWG>20AWG</AWG>
+        </CABLE>
+        <Source>
+          <ATA_CHAPTER>ATAXX</ATA_CHAPTER>
+          <PIN_NAME>115V AC Out Faz-3</PIN_NAME>
+          <LOCATION>MAIN CABIN</LOCATION>
+          <LRU>Ekipman 1</LRU>
+          <RD_NUMBER>1111XX1</RD_NUMBER>
+          <Connector>282108-1</Connector>
+          <Pin_No>C</Pin_No>
+        </Source>
+        <Destination>
+          <ATA_CHAPTER>ATAXX</ATA_CHAPTER>
+          <PIN_NAME>Ekipman 2 115V AC Faz-3</PIN_NAME>
+          <LOCATION>COCKPIT</LOCATION>
+          <LRU>Ekipman 2</LRU>
+          <RD_NUMBER>1111XX2</RD_NUMBER>
+          <Connector>282108-1</Connector>
+          <Pin_No>C</Pin_No>
         </Destination>
       </row>
       <row>
