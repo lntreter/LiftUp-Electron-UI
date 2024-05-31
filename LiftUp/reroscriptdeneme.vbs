@@ -160,6 +160,11 @@ For Each key In blocks.Keys
 
     customName = "MyCustomName" & blocklocator
 
+
+
+    ' Create a new block device CreateBlock ( [name][, assignment][, location][, cmpname][, version][, filename]] )
+    dev.CreateBlock customName, "", "", "", "", ""
+
     WScript.Echo blk.Name
     ' Place the block at the current vertical position
     sym.Load "DEFBLOCK", "1"
