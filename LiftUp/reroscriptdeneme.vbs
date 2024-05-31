@@ -163,13 +163,17 @@ For Each key In blocks.Keys
 
 
     ' Create a new block device CreateBlock ( [name][, assignment][, location][, cmpname][, version][, filename]] )
-    dev.CreateBlock customName, "", "", "", "", ""
+    dev.CreateBlock blk.Name, "", "", "", "", ""
 
+    'dev.CreateConnectorOnBlockEx dev.GetId, "", "", "", "", ""
     WScript.Echo blk.Name
     ' Place the block at the current vertical position
     sym.Load "DEFBLOCK", "1"
     sym.PlaceBlock Sht.GetId, blocklocator * 80, 150, 30, blockHeight
+    sym.AssingTo dev.GetId, 1
     sym.SetDeviceCompleteName blk.Name, "", ""
+
+    
     
     ' Update the vertical position for the next block
     verticalPosition = verticalPosition + blockHeight + 50
