@@ -133,3 +133,58 @@ For Each key In blocks.Keys
         WScript.Echo "  Pin " & pinKey & ": " & pin.SourceBlock.Name & " - " & pin.SourcePinID & " to " & pin.DestinationBlock.Name & " - " & pin.DestinationPinID
     Next
 Next
+
+pcnt = 1
+
+Dim xarr(2)
+Dim yarr(2)
+
+If prj.GetId = 0 Then
+    prj.Create "Test"
+End If
+sht.create 0, "1", "DINA3", 0, 0
+
+' Initialize a variable to track the vertical position of the blocks
+Dim verticalPosition
+verticalPosition = 200 ' Initial vertical position
+
+' Iterate through the blocks to position them and calculate height
+blocklocator = 1
+
+
+
+For Each key In blocks.Keys
+    Set blk = blocks(key)
+    ' Calculate the height of the block based on pin count
+    blockHeight = blk.Pins.Count * 10
+
+    customName = "MyCustomName" & blocklocator
+
+    WScript.Echo blk.Name
+    ' Place the block at the current vertical position
+    sym.Load "DEFBLOCK", "1"
+    sym.PlaceBlock Sht.GetId, blocklocator * 80, 150, 30, blockHeight
+    sym.SetDeviceCompleteName blk.Name, "", ""
+
+    ' Place pins on the block
+    For Each pinKey In blk.Pins.Keys
+        Set pin = blk.Pins(pinKey)
+        ' You'll need to adjust the position and other parameters based on your requirements
+        sym.PlacePins pin.SourcePinID, "", 0, Sht.GetId, (blocklocator * 80) + 10, 160 + (pinKey * 10), 0
+    Next
+    
+    ' Update the vertical position for the next block
+    verticalPosition = verticalPosition + blockHeight + 50
+    blocklocator = blocklocator + 1
+
+     ' Place pins on the block
+    pinPosition = verticalPosition - blockHeight + 10 ' Start placing pins at the top of the block
+    For Each pinKey In blk.Pins.Keys
+        Set pin = blk.Pins(pinKey)
+        ' Adjust the position and other parameters based on your requirements
+        sym.PlacePins pin.SourcePinID, "", 0, Sht.GetId, (blocklocator * 80) + 10, pinPosition, 0
+        pinPosition = pinPosition + 10 ' Increment the pin position for the next pin
+    Next
+Next
+
+sht.display
