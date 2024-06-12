@@ -27,6 +27,24 @@ Class signalRow
     Public Notes
 End Class
 
+Class ConnectorsForBlock
+    Public Name
+    Public PinListFromExcel
+    Public Block
+    Public ConType
+
+    Private Sub Class_Initialize()
+        Set PinListFromExcel = CreateObject("Scripting.Dictionary")
+    End Sub
+
+    ' Print the name of every connector in the dictionary
+    Public Sub PrintConnectors()
+        For Each key In PinListFromExcel.Keys
+            WScript.Echo PinListFromExcel(key)
+        Next
+    End Sub
+End Class
+
 Class ConnectorPin
     Private pSourceBlock
     Private pSourcePinID
@@ -72,17 +90,24 @@ Class ConnectorPin
     Public Property Get DestinationPinID()
         DestinationPinID = pDestinationPinID
     End Property
+
 End Class
 
 Class Block
     Public Name
     Public Pins
+    Public ConnectorsOnBlock
 
     Private Sub Class_Initialize()
         Set Pins = CreateObject("Scripting.Dictionary")
+        Set ConnectorsOnBlock = CreateObject("Scripting.Dictionary")
     End Sub
 
     Public Sub AddPin(pin)
         Pins.Add Pins.Count + 1, pin
+    End Sub
+
+    Public Sub AddConnector(connector)
+        ConnectorsOnBlock.Add ConnectorsOnBlock.Count + 1, connector
     End Sub
 End Class
